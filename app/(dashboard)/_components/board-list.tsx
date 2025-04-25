@@ -19,9 +19,9 @@ export const BoardList = ({ orgId, query }: BoardListProps) => {
   // Unwrap searchParams asynchronously:
   const { search, favorites } = use(query);
 
-  const data = useQuery(api.boards.get, { orgId });
+  const data = useQuery(api.boards.get, { orgId ,search,favorites});
 
-  // Loading state
+  // Loading states
   if (data === undefined) {
     return (
       <div>
@@ -67,7 +67,7 @@ export const BoardList = ({ orgId, query }: BoardListProps) => {
             authorName={board.authorName}
             createdAt={board._creationTime}
             orgId={board.orgId}
-            isFavorite={false}
+            isFavorite={board.isFavorite}
           />
         ))}
       </div>

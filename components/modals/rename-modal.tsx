@@ -57,12 +57,13 @@ export const RenameModal = () => {
                 </DialogDescription>
                 <form onSubmit={onSubmit} className="space-y-4">
                     <Input
-                        disabled={pending}
+                       
                         required
                         maxLength={60}
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         placeholder="Board title"
+                        disabled={pending}
                     />
                     <DialogFooter>
                         <DialogClose asChild>
