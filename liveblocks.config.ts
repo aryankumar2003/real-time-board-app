@@ -19,6 +19,8 @@ export type Cursor = {
 export type Presence = {
   cursor: Cursor | null;
   selection:string[];
+  pencilDraft:[x:number,y:number,presence:number][]|null;
+  penColor:Color|null;
   // Add any other presence properties here
 };
 

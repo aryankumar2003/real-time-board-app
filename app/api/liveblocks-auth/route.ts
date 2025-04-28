@@ -15,10 +15,7 @@ export async function POST(required:Request){
     const authorization=await auth();
     const user=await currentUser();
 
-    console.log("Auth_info",{
-        authorization,
-        user,
-    })
+   
     if(!authorization ||!user){
         return new Response("unauthorized",{status:403});
     }
@@ -35,7 +32,6 @@ export async function POST(required:Request){
         picture:user.imageUrl,
     };
 
-    console.log("UserInfo:",userInfo);
     const session=liveblocks.prepareSession(
         user.id,
         {userInfo}
