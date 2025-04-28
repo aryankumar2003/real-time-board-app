@@ -311,7 +311,8 @@ export const Canvas = ({
     }, [
         camera,
         canvasState.mode,
-        setCanvasState
+        setCanvasState,
+        startDrawing
     ])
 
 
@@ -421,7 +422,7 @@ export const Canvas = ({
         return layerIdsToColorSelection;
     }, [selections])
 
-    const info = useSelf((me) => me.info);
+
 
     return (
         <main className="absolute bg-amber-100 h-full w-full">
