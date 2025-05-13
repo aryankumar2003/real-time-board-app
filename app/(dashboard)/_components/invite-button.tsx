@@ -8,20 +8,29 @@ import{
 } from "@/components/ui/dialog";
 
 import {Button} from "@/components/ui/button";
-
-export const InviteButton=()=>{
-    return(
-        <Dialog>
-            <DialogTrigger asChild>
-                <Button>
-                    <Plus className="h-4 w-4 mr-2"/>
-                    Invite members
-                </Button>
-            </DialogTrigger>
-            <DialogContent className="p-0 bg-transparent border-none
-            max-w-[880px]">
-                <OrganizationProfile/>
-            </DialogContent>
-        </Dialog>
-    )
-}
+export const InviteButton = () => {
+    const OrganizationProfilePage = () => (
+      <OrganizationProfile>
+        <OrganizationProfile.Page label="members" />
+        <OrganizationProfile.Page label="general" />
+      </OrganizationProfile>
+    );
+  
+    return (
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button>
+            <Plus className="h-4 w-4 mr-2" />
+            Invite members
+          </Button>
+        </DialogTrigger>
+  
+        <DialogContent
+          className="p-0 border-none  bg-gray-100 flex justify-center items-center"
+        >
+          <OrganizationProfilePage />
+        </DialogContent>
+      </Dialog>
+    );
+  };
+  
