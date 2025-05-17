@@ -23,7 +23,7 @@ export const Toolbar = ({
 }: ToolbarProps) => {
   return (
     <div className="absolute bottom-10 left-1/2 -translate-x-1/2 translate-y-[50%] flex flex-row gap-x-4">
-      <div className="bg-white rounded-md p-1.5 flex gap-y-1 flex-row
+      <div className="bg-white rounded-md p-1.5 flex gap-y-1 flex-row px-1
             items-center shadow-md">
         <ToolButton
           label="Select"
@@ -96,6 +96,7 @@ export const Toolbar = ({
             canvasState.mode === CanvasMode.Pencil
           }
         />
+        
       </div>
       <div className="bg-white rounded-md p-1.5 flex flex-row
             items-center shadow-md">
