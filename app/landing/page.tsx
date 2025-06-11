@@ -222,7 +222,7 @@ export default function LandingPage() {
               className="relative mx-auto max-w-5xl rounded-xl border bg-background shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
               <Image
-                src="/placeholder.svg?height=600&width=1200"
+                src="/sample.png"
                 width={1200}
                 height={600}
                 alt="BoardFlow Dashboard"
